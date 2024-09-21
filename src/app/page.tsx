@@ -46,13 +46,13 @@ function Logos() {
 function Links() {
   return (
     <>
-      <a href="#home" className="text-lg">
+      <a href="#home" className="text-lg font-semibold">
         Home
       </a>
-      <a href="#about" className="text-lg">
+      <a href="#about" className="text-lg font-semibold">
         About
       </a>
-      <a href="#features" className="text-lg">
+      <a href="#features" className="text-lg font-semibold">
         Features
       </a>
     </>
@@ -131,7 +131,7 @@ export default function Home() {
               <Links />
             </nav>
             <div className="hidden md:block">
-              <Button variant={"outline"} href="/">
+              <Button href="/" variant={"secondary"}>
                 Join the waitlist
               </Button>
             </div>
