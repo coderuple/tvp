@@ -67,7 +67,7 @@ function About({
   descriptions: string[];
 }) {
   return (
-    <div className="bg-gray-50 p-12 rounded-lg shadow-lg ">
+    <div className="p-12 rounded-lg shadow-lg ">
       <h3 className="text-2xl lg:text-4xl font-semibold text-primary">
         {title}
       </h3>
@@ -75,7 +75,7 @@ function About({
       <div className="mt-4 list-disc">
         {" "}
         {descriptions.map((description: string, i: number) => (
-          <p key={i} className="mt-2 text-lg text-secondary">
+          <p key={i} className="mt-6 lg:mt-8  text-lg text-secondary">
             {description}
           </p>
         ))}
@@ -224,14 +224,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-primary py-12 lg:py-20" id="about">
+        <section
+          className="h-[480px] bg-cover bg-center bg-fixed "
+          style={{ backgroundImage: "url('/assets/images/bg-1.jpg')" }}
+        >
+          <div></div>
+        </section>
+
+        <section className=" relative py-12 lg:py-20 required:" id="about">
+          <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0 -z-0"></div>
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
-            <h2 className="text-3xl lg:text-6xl font-bold text-center text-white">
+            <h2 className="text-3xl lg:text-6xl font-bold text-center text-primary">
               Who We Are
             </h2>
-            <div className="mt-8 ">
+            <div className="mt-8 bg-white z-30 relative">
               <About
-                title="About Us"
+                title=""
                 descriptions={[
                   "At The Varsity Pathway (TVP), we believe that every student deserves the opportunity to find their perfect college match and navigate the admissions process with confidence. Our platform harnesses the power of advanced AI technology to deliver personalized college recommendations, scholarship opportunities, and comprehensive application tracking—all designed to make your college journey easier and more successful.",
 
@@ -246,6 +255,12 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          className="h-[480px] bg-cover bg-center bg-fixed "
+          style={{ backgroundImage: "url('/assets/images/bg-2.jpg')" }}
+        >
+          <div></div>
+        </section>
         <section className="bg-white py-12 lg:py-20" id="features">
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
             <h2 className="text-3xl lg:text-6xl font-bold text-center text-secondary">
@@ -331,27 +346,27 @@ export default function Home() {
         </section> */}
 
         <section className="bg-primary py-20 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex flex-col ">
               <div className="basis-full">
-                <h2 className="text-6xl font-bold text-left">
+                <h2 className="text-3xl lg:text-6xl font-bold text-left">
                   Be the First to Find Your Dream College!
                 </h2>
               </div>
 
               <div className=" flex flex-col">
-                <p className="my-6 text-xl text-left">
+                <p className="my-6 text-lg lg:text-xl text-left">
                   Ready to take the stress out of your college search? Join The
                   Varsity Pathway (TVP) waiting list and get early access to our
                   AI-powered platform. Discover personalized college matches,
                   explore scholarship opportunities, and streamline your
                   applications — all in one place.
                 </p>
-                <p className=" text-xl text-left font-bold">
+                <p className=" text-lg text-left lg:text-xl  font-bold">
                   Sign up today to be the first to experience TVP and get
                   exclusive early-bird benefits!
                 </p>
-                <p className=" text-xl text-left font-bold">
+                <p className=" text-lg text-left lg:text-xl  font-bold">
                   Don’t miss out — your future is waiting!
                 </p>
 
