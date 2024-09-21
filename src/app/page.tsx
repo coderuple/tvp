@@ -344,29 +344,34 @@ export default function Home() {
             </div>
           </div>
         </section> */}
-
+        <section
+          className="h-[480px] bg-cover bg-center bg-fixed "
+          style={{ backgroundImage: "url('/assets/images/bg-3.jpg')" }}
+        >
+          <div></div>
+        </section>
         <section className="bg-primary py-20 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex flex-col ">
+            <div className="flex flex-col  justify-center items-center">
               <div className="basis-full">
-                <h2 className="text-3xl lg:text-6xl font-bold text-left">
+                <h2 className="text-3xl lg:text-6xl font-bold text-center">
                   Be the First to Find Your Dream College!
                 </h2>
               </div>
 
-              <div className=" flex flex-col">
-                <p className="my-6 text-lg lg:text-xl text-left">
+              <div className=" flex flex-col justify-center items-center">
+                <p className="my-6 text-lg lg:text-xl text-center">
                   Ready to take the stress out of your college search? Join The
                   Varsity Pathway (TVP) waiting list and get early access to our
                   AI-powered platform. Discover personalized college matches,
                   explore scholarship opportunities, and streamline your
                   applications — all in one place.
                 </p>
-                <p className=" text-lg text-left lg:text-xl  font-bold">
+                <p className=" text-lg  lg:text-xl  text-center font-bold">
                   Sign up today to be the first to experience TVP and get
                   exclusive early-bird benefits!
                 </p>
-                <p className=" text-lg text-left lg:text-xl  font-bold">
+                <p className=" text-lg text-center lg:text-xl  font-bold">
                   Don’t miss out — your future is waiting!
                 </p>
 
@@ -379,8 +384,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 py-12 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <footer className="bg-gray-900 pt-12 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between items-center">
             <div>
               <Image
@@ -397,12 +402,12 @@ export default function Home() {
               <p>Email: hello@thevarsitypathway.io</p>
             </div>
           </div>
+        </div>
 
-          <div className="flex justify-center items-center bg-secondary rounded">
-            <p className="text-sm text-center m-4">
-              &copy; 2024 All rights reserved. The Varsity Pathway.
-            </p>
-          </div>
+        <div className="flex justify-center items-center bg-secondary rounded mt-12">
+          <p className="text-sm text-center m-4">
+            &copy; 2024 All rights reserved. The Varsity Pathway.
+          </p>
         </div>
       </footer>
     </div>
