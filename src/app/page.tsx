@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/Button";
 import Image from "next/image";
+import React from "react";
 import { useState } from "react";
 
 function Logos() {
@@ -67,7 +68,7 @@ function About({
   descriptions: string[];
 }) {
   return (
-    <div className="p-12 rounded-lg shadow-lg ">
+    <div className="p-12 rounded-2xl shadow-lg ">
       <h3 className="text-2xl lg:text-4xl font-semibold text-primary">
         {title}
       </h3>
@@ -91,7 +92,7 @@ function Feature({
   descriptions: string[];
 }) {
   return (
-    <div className="bg-gray-50 p-12 rounded-lg shadow-lg ">
+    <div className="bg-gray-50 p-12 rounded-2xl shadow-lg ">
       <h3 className="text-2xl lg:text-4xl font-semibold text-primary">
         {title}
       </h3>
@@ -230,15 +231,67 @@ export default function Home() {
         >
           <div></div>
         </section>
-
-        <section className=" relative py-12 lg:py-20 required:" id="about">
-          <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0 -z-0"></div>
+        <section className="relative py-12 lg:py-24" id="ebook">
+          <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0 -z-0 rounded-2xl"></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
-            <h2 className="text-3xl lg:text-6xl font-bold text-center text-primary">
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="space-y-8">
+                <h2 className="text-3xl lg:text-5xl font-bold  text-secondary ">
+                  {" "}
+                  Download Your FREE College Application Checklist!
+                </h2>
+                <p className="text-lg text-secondary font-semibold">
+                  Get Organized and Stay on Track with Your College
+                  Applications!
+                </p>
+                <ul className="mt-8 list-none space-y-4">
+                  <li className="text-secondary text-base">
+                    {" "}
+                    ✔️ Keep track of important deadlines for each school.
+                  </li>
+                  <li className="text-secondary text-base">
+                    {" "}
+                    ✔️ Know exactly what documents you need to gather.
+                  </li>
+                  <li className="text-secondary text-base">
+                    {" "}
+                    ✔️ Stay on top of application tasks like essays,
+                    <br />
+                    recommendation letters, and transcripts.
+                  </li>
+                  <li className="text-secondary text-base">
+                    {" "}
+                    ✔️ Feel confident that you’re covering all your bases
+                  </li>
+                </ul>
+                <Button href="/" className="mt-4">
+                  Download Now
+                </Button>
+              </div>
+
+              <div>
+                <div className="flex justify-center items-center">
+                  <div className="aspect-[0.71/1] basis-1/2 relative">
+                    <Image
+                      fill
+                      src="/assets/images/tvp-ebook.png"
+                      alt="ebook"
+                      className="rounded-2xl aspect-auto shadow-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className=" bg-secondary relative py-12 lg:py-24 " id="about">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-16  rounded-2xl ">
+            <h2 className="text-3xl lg:text-6xl font-bold text-center text-white">
               Who We Are
             </h2>
-            <div className="mt-8 bg-white z-30 relative">
+            <div className="mt-8 lg:mt-14 bg-white z-30 relative  rounded-2xl  max-w-[1200px] m-auto  ">
               <About
                 title=""
                 descriptions={[
@@ -261,7 +314,7 @@ export default function Home() {
         >
           <div></div>
         </section>
-        <section className="bg-white py-12 lg:py-20" id="features">
+        <section className="bg-white py-12 lg:py-24" id="features">
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
             <h2 className="text-3xl lg:text-6xl font-bold text-center text-secondary">
               Why Choose Us?
