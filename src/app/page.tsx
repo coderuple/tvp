@@ -56,6 +56,9 @@ function Links() {
       <a href="#features" className="text-lg font-semibold">
         Features
       </a>
+      <a href="#checklist" className="text-lg font-semibold">
+        Get Your Checklist
+      </a>
     </>
   );
 }
@@ -231,7 +234,7 @@ export default function Home() {
         >
           <div></div>
         </section>
-        <section className="relative py-12 lg:py-24" id="ebook">
+        <section className="relative py-12 lg:py-24" id="checklist">
           <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0 -z-0 rounded-2xl"></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
