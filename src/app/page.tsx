@@ -56,8 +56,8 @@ function Links() {
       <a href="#features" className="text-lg font-semibold">
         Features
       </a>
-      <a href="#checklist" className="text-lg font-semibold">
-        Get Your Checklist
+      <a href="#ebook" className="text-lg font-semibold">
+        Get Your EBook
       </a>
     </>
   );
@@ -135,7 +135,10 @@ export default function Home() {
               <Links />
             </nav>
             <div className="hidden md:block">
-              <Button href="/" variant={"secondary"}>
+              <Button
+                href="https://waitlist.gr-site.com/"
+                variant={"secondary"}
+              >
                 Join the waitlist
               </Button>
             </div>
@@ -192,8 +195,7 @@ export default function Home() {
                     recommendations in just minutes.
                   </p>
 
-                  <Button isFull href="">
-                    {" "}
+                  <Button isFull href="https://waitlist.gr-site.com/">
                     Join the waitlist
                   </Button>
                 </div>
@@ -234,42 +236,31 @@ export default function Home() {
         >
           <div></div>
         </section>
-        <section className="relative py-12 lg:py-24" id="checklist">
-          <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0 -z-0 rounded-2xl"></div>
+        <section className="relative py-12 lg:py-24" id="ebook">
+          <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0  rounded-2xl -z-10"></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="space-y-8">
                 <h2 className="text-3xl lg:text-5xl font-bold  text-secondary ">
                   {" "}
-                  Download Your FREE College Application Checklist!
+                  How to Find Your Perfect College Match Without the Stress!
                 </h2>
                 <p className="text-lg text-secondary font-semibold">
-                  Get Organized and Stay on Track with Your College
-                  Applications!
+                  Feeling overwhelmed by the college search process? Our free
+                  eBook shows how AI-powered tools can simplify everything from
+                  finding the right school to managing applications and
+                  financial aid
                 </p>
                 <ul className="mt-8 list-none space-y-4">
                   <li className="text-secondary text-base">
                     {" "}
-                    ✔️ Keep track of important deadlines for each school.
-                  </li>
-                  <li className="text-secondary text-base">
-                    {" "}
-                    ✔️ Know exactly what documents you need to gather.
-                  </li>
-                  <li className="text-secondary text-base">
-                    {" "}
-                    ✔️ Stay on top of application tasks like essays,
-                    <br />
-                    recommendation letters, and transcripts.
-                  </li>
-                  <li className="text-secondary text-base">
-                    {" "}
-                    ✔️ Feel confident that you’re covering all your bases
+                    Download now for practical insights and strategies to make
+                    confident, informed decisions on your college journey!
                   </li>
                 </ul>
-                <Button href="/" className="mt-4">
-                  Download Now
+                <Button href="https://tvp.grwebsite.com/" className="mt-4">
+                  Grab Your EBook Now
                 </Button>
               </div>
 
@@ -298,13 +289,10 @@ export default function Home() {
               <About
                 title=""
                 descriptions={[
-                  "At The Varsity Pathway (TVP), we believe that every student deserves the opportunity to find their perfect college match and navigate the admissions process with confidence. Our platform harnesses the power of advanced AI technology to deliver personalized college recommendations, scholarship opportunities, and comprehensive application tracking—all designed to make your college journey easier and more successful.",
+                  "At The Varsity Pathway (TVP), we believe every student deserves a seamless college admissions experience. Our AI-driven platform delivers personalized college recommendations, scholarship matches, and application tracking to guide you every step of the way.",
+                  "With tailored insights based on your unique profile, TVP simplifies your path to higher education, helping you find the perfect school and explore financial aid opportunities. Trusted by students, counselors, and schools nationwide, we’re here to make your college journey smarter and more successful.",
 
-                  "With TVP, we’ve reimagined the way students approach their educational future. Our AI-driven platform analyzes your unique academic profile, interests, and goals to provide tailored guidance every step of the way. Whether you’re looking for the right school, managing your applications, or exploring financial aid options, we’re here to ensure you have all the tools you need to succeed.",
-
-                  "We’re trusted by thousands of students, counselors, and schools across the country because we provide a smarter, more efficient way to plan for higher education. Our mission is simple: to empower students to achieve their dreams by simplifying the college admissions process through cutting-edge technology, personalized insights, and user-friendly tools",
-
-                  "Join us today, and let TVP help you discover your path to college success.",
+                  "Join our waitlist today and discover your path to college success!",
                 ]}
               />
             </div>
@@ -334,7 +322,7 @@ export default function Home() {
                 title="Scholarship Search & Financial Aid."
                 descriptions={[
                   "Scholarship Search: Discover scholarships that align with your profile and academic goals, making college more affordable",
-                  "Financial Aid Integration: Access financial aid calculators and tools to understand how to fund your college journey",
+                  "Financial Aid Integration: Access financial aid calculators and tools to understand how to fund your college journey.",
                 ]}
               />
               <Feature
@@ -431,7 +419,11 @@ export default function Home() {
                   Don’t miss out — your future is waiting!
                 </p>
 
-                <Button href="/" variant={"white"} className="mt-4">
+                <Button
+                  href="https://waitlist.gr-site.com/"
+                  variant={"white"}
+                  className="mt-4"
+                >
                   Join the waitlist
                 </Button>
               </div>
@@ -455,7 +447,14 @@ export default function Home() {
             <div>
               <p>Contact Us</p>
 
-              <p>Email: hello@thevarsitypathway.io</p>
+              <p>
+                <a
+                  className="underline text-white"
+                  href="mailto:hello@thevarsitypathway.io"
+                >
+                  hello@thevarsitypathway.io
+                </a>
+              </p>
             </div>
           </div>
         </div>
