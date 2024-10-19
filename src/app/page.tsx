@@ -7,36 +7,36 @@ import { useState } from "react";
 
 function Logos() {
   return (
-    <div className=" w-full  h-full m-auto flex justify-center space-x-6  group-hover:paused">
-      <div className="aspect-square basis-3/12 relative m-6">
+    <div className="container h-full m-auto flex justify-center  group-hover:paused">
+      <div className="aspect-square w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/eu.svg"
           alt="EU"
-          className="h-6"
+          className="h-6 max-w-none"
           fill
         />
       </div>
-      <div className="aspect-square basis-3/12 relative m-6">
+      <div className="aspect-square w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/havard.svg"
           alt="EU"
-          className="h-6"
+          className="h-6 max-w-none"
           fill
         />
       </div>
-      <div className="aspect-square basis-3/12 relative m-6">
+      <div className="aspect-square w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/stanford.svg"
           alt="EU"
-          className="h-6"
+          className="h-6 max-w-none"
           fill
         />
       </div>
-      <div className="aspect-square basis-3/12 relative m-6">
+      <div className="aspect-square w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/york.svg"
           alt="EU"
-          className="h-6"
+          className="h-6 max-w-none"
           fill
         />
       </div>
@@ -56,7 +56,10 @@ function Links() {
       <a href="#features" className="text-lg font-semibold">
         Features
       </a>
-      <a href="#ebook" className="text-lg font-semibold">
+      <a
+        href="https://ebook.thevarsitypathway.com/"
+        className="text-lg font-semibold"
+      >
         Get Your EBook
       </a>
     </>
@@ -136,7 +139,7 @@ export default function Home() {
             </nav>
             <div className="hidden md:block">
               <Button
-                href="https://waitlist.gr-site.com/"
+                href="https://emails.thevarsitypathway.com/"
                 variant={"secondary"}
               >
                 Join the waitlist
@@ -168,7 +171,10 @@ export default function Home() {
             <nav className="md:hidden mt-4 space-y-4 flex flex-col">
               <Links />
 
-              <Button href="/" variant={"outline"}>
+              <Button
+                href="https://emails.thevarsitypathway.com/"
+                variant={"outline"}
+              >
                 Join the waitlist
               </Button>
             </nav>
@@ -195,7 +201,7 @@ export default function Home() {
                     recommendations in just minutes.
                   </p>
 
-                  <Button isFull href="https://waitlist.gr-site.com/">
+                  <Button isFull href="https://emails.thevarsitypathway.com/">
                     Join the waitlist
                   </Button>
                 </div>
@@ -225,13 +231,21 @@ export default function Home() {
         </section>
 
         <section className="bg-secondary h-[200px] ">
-          <div className="  flex group container h-full items-center justify-between overflow-hidden mx-auto px-4 sm:px-6 lg:px-8">
-            <Logos />
+          <div className=" flex group container h-full items-center justify-between overflow-hidden mx-auto px-4 sm:px-6 lg:px-8">
+            <div className=" animate-loop-scroll w-full">
+              <Logos />
+            </div>
+            <div className=" w-full animate-loop-scroll">
+              <Logos />
+            </div>
+            {/* <div className="animate-loop-scroll w-full">
+              <Logos />
+            </div> */}
           </div>
         </section>
 
         <section
-          className="h-[480px] bg-cover bg-center bg-fixed "
+          className="h-[480px] bg-cover bg-center lg:bg-fixed "
           style={{ backgroundImage: "url('/assets/images/bg-1.jpg')" }}
         >
           <div></div>
@@ -259,7 +273,10 @@ export default function Home() {
                     confident, informed decisions on your college journey!
                   </li>
                 </ul>
-                <Button href="https://tvp.grwebsite.com/" className="mt-4">
+                <Button
+                  href="https://ebook.thevarsitypathway.com/"
+                  className="mt-4"
+                >
                   Grab Your EBook Now
                 </Button>
               </div>
@@ -300,7 +317,7 @@ export default function Home() {
         </section>
 
         <section
-          className="h-[480px] bg-cover bg-center bg-fixed "
+          className="h-[480px] bg-cover bg-center lg:bg-fixed "
           style={{ backgroundImage: "url('/assets/images/bg-2.jpg')" }}
         >
           <div></div>
@@ -389,7 +406,7 @@ export default function Home() {
           </div>
         </section> */}
         <section
-          className="h-[480px] bg-cover bg-center bg-fixed "
+          className="h-[480px] bg-cover bg-center lg:bg-fixed "
           style={{ backgroundImage: "url('/assets/images/bg-3.jpg')" }}
         >
           <div></div>
@@ -420,7 +437,7 @@ export default function Home() {
                 </p>
 
                 <Button
-                  href="https://waitlist.gr-site.com/"
+                  href="https://emails.thevarsitypathway.com/"
                   variant={"white"}
                   className="mt-4"
                 >
