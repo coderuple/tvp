@@ -231,11 +231,11 @@ export default function Home() {
         </section>
 
         <section className="bg-secondary h-[200px] ">
-          <div className=" flex group container h-full items-center justify-between overflow-hidden mx-auto px-4 sm:px-6 lg:px-8">
-            <div className=" animate-loop-scroll w-full">
+          <div className=" flex group container h-full items-center justify-between overflow-hidden mx-auto px-4  lg:px-8">
+            <div className=" animate-loop-scroll w-full bg-secondary">
               <Logos />
             </div>
-            <div className=" w-full animate-loop-scroll">
+            <div className=" w-full animate-loop-scroll bg-secondary">
               <Logos />
             </div>
             {/* <div className="animate-loop-scroll w-full">
