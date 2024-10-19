@@ -230,7 +230,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-secondary h-[200px] ">
+        <section className="bg-secondary  ">
           <div className=" flex group container h-full items-center justify-between overflow-hidden mx-auto px-4  lg:px-8">
             <div className=" animate-loop-scroll w-full bg-secondary">
               <Logos />
