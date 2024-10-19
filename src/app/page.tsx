@@ -8,7 +8,7 @@ import { useState } from "react";
 function Logos() {
   return (
     <div className="container h-full m-auto flex justify-center  group-hover:paused">
-      <div className="aspect-square w-[300px] relative m-2 md:m-6">
+      <div className="h-[100px] w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/eu.svg"
           alt="EU"
@@ -16,7 +16,7 @@ function Logos() {
           fill
         />
       </div>
-      <div className="aspect-square w-[300px] relative m-2 md:m-6">
+      <div className="h-[100px] w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/havard.svg"
           alt="EU"
@@ -24,7 +24,7 @@ function Logos() {
           fill
         />
       </div>
-      <div className="aspect-square w-[300px] relative m-2 md:m-6">
+      <div className="h-[100px] w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/stanford.svg"
           alt="EU"
@@ -32,11 +32,11 @@ function Logos() {
           fill
         />
       </div>
-      <div className="aspect-square w-[300px] relative m-2 md:m-6">
+      <div className="h-[100px] w-[300px] relative m-2 md:m-6">
         <Image
           src="/assets/images/logos/york.svg"
           alt="EU"
-          className="h-6 max-w-none"
+          className="h-6 "
           fill
         />
       </div>
@@ -230,14 +230,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-secondary overflow-hidden relative">
-          <div className="bg-secondary  w-full h-full absolute top-0 right-0"></div>
-
-          <div className=" flex group container h-full items-center justify-between overflow-hidden mx-auto px-4  lg:px-8">
-            <div className=" animate-loop-scroll w-full bg-secondary">
+        <section className="bg-primary  relative ">
+          <div className=" flex group container  items-center justify-between overflow-hidden bg-primary mx-auto px-4  lg:px-8 ">
+            <div className=" group group-hover:paused animate-loop-scroll w-full  h-full">
               <Logos />
             </div>
-            <div className=" w-full animate-loop-scroll bg-secondary">
+            <div className="group group-hover:paused w-full animate-loop-scroll ">
               <Logos />
             </div>
             {/* <div className="animate-loop-scroll w-full">
