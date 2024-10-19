@@ -467,7 +467,7 @@ export default function Home() {
               <p>
                 <a
                   className="underline text-white"
-                  href="mailto:hello@thevarsitypathway.io"
+                  href="mailto:hello@thevarsitypathway.com"
                 >
                   hello@thevarsitypathway.io
                 </a>
