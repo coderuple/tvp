@@ -8,7 +8,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "The Varsity Pathway",
+  title: "Qoollege",
   description: "We Make Your College Search Easy",
 };
 
