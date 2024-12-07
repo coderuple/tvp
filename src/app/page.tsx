@@ -56,10 +56,7 @@ function Links() {
       <a href="#features" className="text-lg font-semibold">
         Features
       </a>
-      <a
-        href="https://ebook.thevarsitypathway.com/"
-        className="text-lg font-semibold"
-      >
+      <a href="https://ebook.qoollege.com/" className="text-lg font-semibold">
         Get Your EBook
       </a>
     </>
@@ -129,7 +126,7 @@ export default function Home() {
             <div className="flex items-center space-x-4">
               <Image
                 src="/assets/logo.svg"
-                alt="The Varsity Pathway"
+                alt="Qoollege"
                 width={170}
                 height={32}
               />
@@ -138,10 +135,7 @@ export default function Home() {
               <Links />
             </nav>
             <div className="hidden md:block">
-              <Button
-                href="https://emails.thevarsitypathway.com/"
-                variant={"secondary"}
-              >
+              <Button href="https://emails.qoollege.com/" variant={"secondary"}>
                 Join the waitlist
               </Button>
             </div>
@@ -171,10 +165,7 @@ export default function Home() {
             <nav className="md:hidden mt-4 space-y-4 flex flex-col">
               <Links />
 
-              <Button
-                href="https://emails.thevarsitypathway.com/"
-                variant={"outline"}
-              >
+              <Button href="https://emails.qoollege.com/" variant={"outline"}>
                 Join the waitlist
               </Button>
             </nav>
@@ -201,7 +192,7 @@ export default function Home() {
                     recommendations in just minutes.
                   </p>
 
-                  <Button isFull href="https://emails.thevarsitypathway.com/">
+                  <Button isFull href="https://emails.qoollege.com/">
                     Join the waitlist
                   </Button>
                 </div>
@@ -213,7 +204,7 @@ export default function Home() {
         <section className="relative overflow-hidden">
           <div className="bg-primary opacity-10 w-full h-full absolute top-0 right-0"></div>
 
-          <div className="bg-secondary w-[38%] h-[200%] absolute top-0 -right-40 rotate-45"></div>
+          <div className="bg-secondary rounded-full w-[60%] h-[200%] absolute top-0 right-0  "></div>
           <div className="flex  lg:flex-row py-20">
             <div className="aspect-square basis-1/4 relative bg-gray-100">
               <Image src={"/assets/images/st-1.png"} alt="image-1" fill />
@@ -273,10 +264,7 @@ export default function Home() {
                     confident, informed decisions on your college journey!
                   </li>
                 </ul>
-                <Button
-                  href="https://ebook.thevarsitypathway.com/"
-                  className="mt-4"
-                >
+                <Button href="https://ebook.qoollege.com/" className="mt-4">
                   Grab Your EBook Now
                 </Button>
               </div>
@@ -306,7 +294,7 @@ export default function Home() {
               <About
                 title=""
                 descriptions={[
-                  "At The Varsity Pathway (TVP), we believe every student deserves a seamless college admissions experience. Our AI-driven platform delivers personalized college recommendations, scholarship matches, and application tracking to guide you every step of the way.",
+                  "At Qoollege, we believe every student deserves a seamless college admissions experience. Our AI-driven platform delivers personalized college recommendations, scholarship matches, and application tracking to guide you every step of the way.",
                   "With tailored insights based on your unique profile, TVP simplifies your path to higher education, helping you find the perfect school and explore financial aid opportunities. Trusted by students, counselors, and schools nationwide, we’re here to make your college journey smarter and more successful.",
 
                   "Join our waitlist today and discover your path to college success!",
@@ -423,10 +411,10 @@ export default function Home() {
               <div className=" flex flex-col justify-center items-center">
                 <p className="my-6 text-lg lg:text-xl text-center">
                   Ready to take the stress out of your college search? Join The
-                  Varsity Pathway (TVP) waiting list and get early access to our
-                  AI-powered platform. Discover personalized college matches,
-                  explore scholarship opportunities, and streamline your
-                  applications — all in one place.
+                  Qoollege waiting list and get early access to our AI-powered
+                  platform. Discover personalized college matches, explore
+                  scholarship opportunities, and streamline your applications —
+                  all in one place.
                 </p>
                 <p className=" text-lg  lg:text-xl  text-center font-bold">
                   Sign up today to be the first to experience TVP and get
@@ -437,7 +425,7 @@ export default function Home() {
                 </p>
 
                 <Button
-                  href="https://emails.thevarsitypathway.com/"
+                  href="https://emails.qoollege.com/"
                   variant={"white"}
                   className="mt-4"
                 >
@@ -455,7 +443,7 @@ export default function Home() {
             <div>
               <Image
                 src="/assets/logo-inverted.svg"
-                alt="The Varsity Pathway"
+                alt="Qoollege"
                 width={170}
                 height={70}
               />
@@ -467,9 +455,9 @@ export default function Home() {
               <p>
                 <a
                   className="underline text-white"
-                  href="mailto:hello@thevarsitypathway.com"
+                  href="mailto:hello@qoollege.com"
                 >
-                  hello@thevarsitypathway.io
+                  hello@qoollege.com
                 </a>
               </p>
             </div>
@@ -478,7 +466,7 @@ export default function Home() {
 
         <div className="flex justify-center items-center bg-secondary rounded mt-12">
           <p className="text-sm text-center m-4">
-            &copy; 2024 All rights reserved. The Varsity Pathway.
+            &copy; 2024 All rights reserved. Qoollege.
           </p>
         </div>
       </footer>
