@@ -274,7 +274,7 @@ export default function Home() {
                   <div className="aspect-[0.71/1] basis-1/2 relative">
                     <Image
                       fill
-                      src="/assets/images/tvp-ebook.png"
+                      src="/assets/images/ebook.jpg"
                       alt="ebook"
                       className="rounded-2xl aspect-auto shadow-lg"
                     />
@@ -295,7 +295,7 @@ export default function Home() {
                 title=""
                 descriptions={[
                   "At Qoollege, we believe every student deserves a seamless college admissions experience. Our AI-driven platform delivers personalized college recommendations, scholarship matches, and application tracking to guide you every step of the way.",
-                  "With tailored insights based on your unique profile, TVP simplifies your path to higher education, helping you find the perfect school and explore financial aid opportunities. Trusted by students, counselors, and schools nationwide, we’re here to make your college journey smarter and more successful.",
+                  "With tailored insights based on your unique profile, Qoollege simplifies your path to higher education, helping you find the perfect school and explore financial aid opportunities. Trusted by students, counselors, and schools nationwide, we’re here to make your college journey smarter and more successful.",
 
                   "Join our waitlist today and discover your path to college success!",
                 ]}
@@ -417,7 +417,7 @@ export default function Home() {
                   all in one place.
                 </p>
                 <p className=" text-lg  lg:text-xl  text-center font-bold">
-                  Sign up today to be the first to experience TVP and get
+                  Sign up today to be the first to experience Qoollege and get
                   exclusive early-bird benefits!
                 </p>
                 <p className=" text-lg text-center lg:text-xl  font-bold">
@@ -466,7 +466,7 @@ export default function Home() {
 
         <div className="flex justify-center items-center bg-secondary rounded mt-12">
           <p className="text-sm text-center m-4">
-            &copy; 2024 All rights reserved. Qoollege.
+            &copy; {new Date().getFullYear()} All rights reserved. Qoollege.
           </p>
         </div>
       </footer>
