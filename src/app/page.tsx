@@ -56,7 +56,10 @@ function Links() {
       <a href="#features" className="text-lg font-semibold">
         Features
       </a>
-      <a href="https://ebook.qoollege.com/" className="text-lg font-semibold">
+      <a
+        href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+        className="text-lg font-semibold"
+      >
         Get Your EBook
       </a>
     </>
@@ -135,7 +138,10 @@ export default function Home() {
               <Links />
             </nav>
             <div className="hidden md:block">
-              <Button href="https://emails.qoollege.com/" variant={"secondary"}>
+              <Button
+                href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                variant={"secondary"}
+              >
                 Join the waitlist
               </Button>
             </div>
@@ -165,7 +171,10 @@ export default function Home() {
             <nav className="md:hidden mt-4 space-y-4 flex flex-col">
               <Links />
 
-              <Button href="https://emails.qoollege.com/" variant={"outline"}>
+              <Button
+                href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                variant={"outline"}
+              >
                 Join the waitlist
               </Button>
             </nav>
@@ -192,7 +201,10 @@ export default function Home() {
                     recommendations in just minutes.
                   </p>
 
-                  <Button isFull href="https://emails.qoollege.com/">
+                  <Button
+                    isFull
+                    href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                  >
                     Join the waitlist
                   </Button>
                 </div>
@@ -264,7 +276,10 @@ export default function Home() {
                     confident, informed decisions on your college journey!
                   </li>
                 </ul>
-                <Button href="https://ebook.qoollege.com/" className="mt-4">
+                <Button
+                  href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                  className="mt-4"
+                >
                   Grab Your EBook Now
                 </Button>
               </div>
@@ -425,7 +440,7 @@ export default function Home() {
                 </p>
 
                 <Button
-                  href="https://emails.qoollege.com/"
+                  href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
                   variant={"white"}
                   className="mt-4"
                 >
