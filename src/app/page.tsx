@@ -4,6 +4,15 @@ import { Button } from "@/components/Button";
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
+import {
+  FaUserPlus,
+  FaUniversity,
+  FaFileAlt,
+  FaShieldAlt,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 function Logos() {
   return (
@@ -56,6 +65,7 @@ function Links() {
       <a href="#features" className="text-lg font-semibold">
         Features
       </a>
+
       <a
         href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
         className="text-lg font-semibold"
@@ -73,47 +83,121 @@ function About({
   title: string;
   descriptions: string[];
 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div className="p-12 rounded-2xl shadow-lg ">
-      <h3 className="text-2xl lg:text-4xl font-semibold text-primary">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+      className="p-12 rounded-2xl shadow-lg"
+    >
+      <motion.h3
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-2xl lg:text-4xl font-semibold text-primary"
+      >
         {title}
-      </h3>
+      </motion.h3>
 
       <div className="mt-4 list-disc">
-        {" "}
         {descriptions.map((description: string, i: number) => (
-          <p key={i} className="mt-6 lg:mt-8  text-lg text-secondary">
+          <motion.p
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+            className="mt-6 lg:mt-8 text-lg text-secondary"
+          >
             {description}
-          </p>
+          </motion.p>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
+
 function Feature({
   title,
   descriptions,
+  icon: Icon,
 }: {
   title: string;
   descriptions: string[];
+  icon: React.ComponentType<{ className?: string }>;
 }) {
-  return (
-    <div className="bg-gray-50 p-12 rounded-2xl shadow-lg ">
-      <h3 className="text-2xl lg:text-4xl font-semibold text-primary">
-        {title}
-      </h3>
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-      <ul className="mt-4 list-disc">
-        {" "}
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="bg-gray-50 p-12 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+    >
+      <div className="flex items-start gap-4 mb-6">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={isInView ? { scale: 1 } : { scale: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="p-4 rounded-full bg-secondary/10 transform transition-all duration-300 hover:scale-110 shrink-0"
+        >
+          <Icon className="text-4xl text-secondary" />
+        </motion.div>
+        <motion.h3
+          initial={{ opacity: 0, x: -20 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-2xl lg:text-4xl font-semibold text-primary"
+        >
+          {title}
+        </motion.h3>
+      </div>
+
+      <motion.ul
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="mt-4 list-disc pl-6"
+      >
         {descriptions.map((description: string, i: number) => (
-          <li key={i} className="mt-2 text-lg text-secondary">
+          <motion.li
+            key={i}
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+            className="mt-2 text-lg text-secondary"
+          >
             {description}
-          </li>
+          </motion.li>
         ))}
-      </ul>
-    </div>
+      </motion.ul>
+    </motion.div>
   );
 }
+
+function SectionHeader({ children }: { children: React.ReactNode }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.h2
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5 }}
+      className="text-3xl lg:text-6xl font-bold text-center text-secondary mb-12"
+    >
+      {children}
+    </motion.h2>
+  );
+}
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -137,12 +221,20 @@ export default function Home() {
             <nav className="hidden md:flex space-x-8">
               <Links />
             </nav>
-            <div className="hidden md:block">
+            <div className="hidden md:block space-x-4">
               <Button
-                href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                // href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                href="https://app.qoollege.com/login"
+                variant={"outline"}
+              >
+                Login
+              </Button>
+              <Button
+                // href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
+                href="https://app.qoollege.com/register"
                 variant={"secondary"}
               >
-                Join the waitlist
+                Register
               </Button>
             </div>
             <div className="md:hidden">
@@ -171,11 +263,14 @@ export default function Home() {
             <nav className="md:hidden mt-4 space-y-4 flex flex-col">
               <Links />
 
+              <Button href="https://app.qoollege.com/login" variant={"outline"}>
+                Login
+              </Button>
               <Button
-                href="https://api.leadconnectorhq.com/widget/form/0Bi7lRORuc6ph34rFEyn"
-                variant={"outline"}
+                href="https://app.qoollege.com/register"
+                variant={"secondary"}
               >
-                Join the waitlist
+                Register
               </Button>
             </nav>
           )}
@@ -302,15 +397,13 @@ export default function Home() {
 
         <section className=" bg-secondary relative py-12 lg:py-24 " id="about">
           <div className="container mx-auto px-4 sm:px-6 lg:px-16  rounded-2xl ">
-            <h2 className="text-3xl lg:text-6xl font-bold text-center text-white">
-              Who We Are
-            </h2>
+            <SectionHeader>Who We Are</SectionHeader>
             <div className="mt-8 lg:mt-14 bg-white z-30 relative  rounded-2xl  max-w-[1200px] m-auto  ">
               <About
                 title=""
                 descriptions={[
                   "At Qoollege, we believe every student deserves a seamless college admissions experience. Our AI-driven platform delivers personalized college recommendations, scholarship matches, and application tracking to guide you every step of the way.",
-                  "With tailored insights based on your unique profile, Qoollege simplifies your path to higher education, helping you find the perfect school and explore financial aid opportunities. Trusted by students, counselors, and schools nationwide, we’re here to make your college journey smarter and more successful.",
+                  "With tailored insights based on your unique profile, Qoollege simplifies your path to higher education, helping you find the perfect school and explore financial aid opportunities. Trusted by students, counselors, and schools nationwide, we're here to make your college journey smarter and more successful.",
 
                   "Join our waitlist today and discover your path to college success!",
                 ]}
@@ -327,36 +420,45 @@ export default function Home() {
         </section>
         <section className="bg-white py-12 lg:py-24" id="features">
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
-            <h2 className="text-3xl lg:text-6xl font-bold text-center text-secondary">
-              Why Choose Us?
-            </h2>
+            <SectionHeader>Why Choose Us?</SectionHeader>
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
               <Feature
-                title="College Search & Personalization."
+                icon={FaUserPlus}
+                title="Seamless Registration & Onboarding"
                 descriptions={[
-                  "Application Tracking: Easily track deadlines, required documents, and your overall application status, all in one place.",
-                  "Document Management: Upload and manage your documents securely, ensuring you never miss a submission.",
+                  "Quick sign-up with Google, Facebook, and Microsoft logins for easy access",
+                  "Secure consent collection for privacy and minor access protection",
+                  "Customizable parent & student profiles, including extracurriculars",
+                  "Flexible payment options, including free accounts and 'Buy Now, Pay Later' plans",
                 ]}
               />
               <Feature
-                title="Scholarship Search & Financial Aid."
+                icon={FaUniversity}
+                title="Personalized College Recommendations"
                 descriptions={[
-                  "Scholarship Search: Discover scholarships that align with your profile and academic goals, making college more affordable",
-                  "Financial Aid Integration: Access financial aid calculators and tools to understand how to fund your college journey.",
+                  "AI-powered dashboard with tailored university suggestions based on your profile",
+                  "Comprehensive comparison tools to evaluate universities side by side",
+                  "Detailed university pages with key information, deadlines, and interest tracking",
                 ]}
               />
               <Feature
-                title="Data & Insights."
+                icon={FaFileAlt}
+                title="Smart Document Management"
                 descriptions={[
-                  "Data Management & Analytics: A powerful framework for collecting and analyzing data to provide actionable insights.",
-                  "Data Visualization & Reporting: Track key metrics through user-friendly dashboards and reports, providing valuable insights for stakeholders.",
+                  "Streamlined upload & management for essential documents like transcripts and recommendations",
+                  "Secure storage for test scores (SAT, GRE, GMAT, TOEFL, IELTS)",
+                  "Intelligent to-do lists with deadline tracking and milestone progress bars",
+                  "Automated reminders via text & email for upcoming deadlines",
                 ]}
               />
               <Feature
-                title="Community & Engagement."
+                icon={FaShieldAlt}
+                title="Data Privacy & Security"
                 descriptions={[
-                  "Community Building & Engagement: Join a supportive online community where students and parents can share experiences, ask questions, and help each other.",
-                  "User Reviews & Ratings: Check out reviews and ratings from other students to help you make informed decisions about colleges.",
+                  "End-to-end encryption ensuring your sensitive information stays protected",
+                  "Secure OAuth authentication for safe and reliable logins",
+                  "Role-based access control (RBAC) for parents & students",
+                  "Comprehensive audit logs & governance policies for data protection",
                 ]}
               />
             </div>
@@ -436,7 +538,7 @@ export default function Home() {
                   exclusive early-bird benefits!
                 </p>
                 <p className=" text-lg text-center lg:text-xl  font-bold">
-                  Don’t miss out — your future is waiting!
+                  Don&apos;t miss out — your future is waiting!
                 </p>
 
                 <Button
